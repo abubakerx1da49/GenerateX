@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+:root {
+  --theme-background: #191919;
+  --theme-background-2: #121212;
+  --editor-background: #202020;
+  --theme-color: white;
+  --min-color: lightblue;
+  --max-color: lightgreen;
+  --shadow-color: #191919;
+  /* --theme-background: lightgray;
+  --theme-background-2: white;
+  --editor-background: #F0F0F0;
+  --theme-color: black;
+  --min-color: blue;
+  --max-color: green;
+  --shadow-color: darkgray; */
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  background-color: var(--theme-background-2);
+}
+
+
+.appbar_section {
+  width: 100vw;
+  height: 38px;
+  min-height: 38px;
+  position: relative;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .75rem;
+  padding: 0 .2rem;
+  z-index: 60;
+  -webkit-app-region: drag;
+  box-shadow: 0 0 4px var(--shadow-color);
+  color: var(--theme-color);
+  /* border-bottom: 1px solid var(--shadow-color); */
+  background-color: var(--editor-background) !important;
+}
+
+.appbar_section .img{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 100%;
+  -webkit-app-region: no-drag;
+  padding-top: .5rem;
+}
+
+.img input{
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.appbar_section .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appbar_section .buttons button {
+  height: 28px;
+  width: 28px;
+  min-height: 28px;
+  position: relative;
+  margin: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--theme-background-2);
+  border-radius: 4px;
+  -webkit-app-region: no-drag;
+  /* border: 1px solid blue; */
+  text-shadow: 0 0 1px var(--theme-color);
+}
+
+.appbar_section .buttons button:first-child:hover {
+  color: var(--min-color);
+}
+
+.appbar_section .buttons button:hover {
+  color: var(--max-color);
+}
+
+.appbar_section .buttons button:last-child:hover {
+  color: red;
+}
+
+.appbar_section img {
+  height: 22px;
+  margin-right: .3rem;
+  border-radius: .2rem;
+}
+
+/* Code to Remove Arrow From Input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.upper_section {
+  /* border: 2px solid brown; */
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--editor-background);
+  box-shadow: 0 0 4px var(--shadow-color);
+}
+
+.upper_section input {
+  width: 80%;
+  outline: none;
+  border: 2px solid gray;
+  padding: .4rem;
+  border-radius: 5px;
+  font-family: 'Source Code Pro', sans-serif;
+  background-color: transparent;
+  color: var(--theme-color);
+}
+
+.upper_section input:focus {
+  border: 2px solid red;
+}
+
+.upper_section button {
+  width: 16%;
+  padding: .5rem;
+  border-radius: 5px;
+  color: white;
+  background-color: orangered;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.upper_section button:disabled {
+  background-color: gray;
+  cursor: default;
+}
+
+.lower_section {
+  /* border: 2px solid blue; */
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left_section {
+  /* border: 2px solid green; */
+  width: 55%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 7px;
+}
+
+.left_section canvas {
+  width: 250px;
+  height: 250px;
+  /* border: 1px solid black; */
+  border-radius: 5px;
+  margin-bottom: .5rem;
+  transition: all .3s ease !important;
+}
+
+.right_section {
+  /* border: 2px solid orange; */
+  background-color: var(--editor-background);
+  width: 40%;
+  height: 100%;
+  padding: .8rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.right_section .form-floating {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  color: var(--theme-color);
+}
+
+.right_section .form-floating label {
+  color: gray;
+}
+
+.right_section input{
+  width: 100% !important;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: var(--theme-background-2);
+  color: var(--theme-color);
+}
+.right_section input:focus{
+  background-color: var(--theme-background-2);
+  color: var(--theme-color);
+}
+
+.attr_buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.attr_buttons button{
+  padding: .5rem;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.save_btn {
+  width: 63%;
+  background-color: olivedrab;
+}
+
+.refresh_btn {
+  width: 35%;
+  background-color: var(--theme-background-2);
+  color: gray !important;
+}
+
+.refresh_btn:hover{
+  color: var(--theme-color) !important;
+}
