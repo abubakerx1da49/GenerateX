@@ -57,7 +57,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10%;
+  width: auto;
   height: 100%;
   -webkit-app-region: no-drag;
   padding-top: .5rem;
