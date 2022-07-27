@@ -17,7 +17,6 @@ const createWindow = () => {
     minHeight: 530,
     maxWidth: 800,
     maxHeight: 530,
-    icon: 'logo.png',
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
