@@ -8,20 +8,20 @@
 }
 
 :root {
-  --theme-background: #191919;
+  /* --theme-background: #191919;
   --theme-background-2: #121212;
   --editor-background: #202020;
   --theme-color: white;
   --min-color: lightblue;
   --max-color: lightgreen;
-  --shadow-color: #191919;
-  /* --theme-background: lightgray;
+  --shadow-color: #191919; */
+  --theme-background: lightgray;
   --theme-background-2: white;
   --editor-background: #F0F0F0;
   --theme-color: black;
   --min-color: blue;
   --max-color: green;
-  --shadow-color: darkgray; */
+  --shadow-color: darkgray;
 }
 
 body {
@@ -134,7 +134,7 @@ input[type=number] {
 }
 
 .upper_section input {
-  width: 80%;
+  width: 98%;
   outline: none;
   border: 2px solid gray;
   padding: .4rem;

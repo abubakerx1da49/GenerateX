@@ -53,13 +53,6 @@ setInterval(() => {
         r.style.setProperty('--shadow-color', 'darkgray');
     }
 
-
-}, 250);
-
-
-// Event on Generate Button is Clicked
-generate_btn.addEventListener("click", () => {
-    console.log(color, bg, scale, margin, mp)
     QRCode.toCanvas(canvas, input.value, {
         color: {
             dark: color,
@@ -72,7 +65,7 @@ generate_btn.addEventListener("click", () => {
         function (error) {
             if (error) console.error(error)
         })
-
+    
     QRCode.toDataURL(input.value)
         .then(url => {
             console.log(url)
@@ -81,7 +74,8 @@ generate_btn.addEventListener("click", () => {
         .catch(err => {
             console.error(err)
         })
-})
+
+}, 250);
 
 
 // Title Bar JS
