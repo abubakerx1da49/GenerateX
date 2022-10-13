@@ -6,8 +6,8 @@
 An App Designed to Generate Variety of QR Codes
 
 - [Features](#features)
-- [Instruction](#features)
-- [Downlaod](#features)
+- [Instruction](#instruction)
+- [Downlaod](#download)
 
 # Features
 ## Customizable
